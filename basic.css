@@ -140,3 +140,38 @@ div.box-container div{
     */
     background: aqua center center fixed url('./files/pictures/logo-css-300x300.png') 
 }
+
+/* ############# */
+/* ### FONT ### */
+/* ############# */
+
+/* Untuk tag paragraph yang memiliki id font */
+p#font {
+    color: black;
+    /* georgia, times, tnr : nama font */
+    /* serif atau sans-serif : jenis font */
+    /* tidak ada batasan list font */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+    font-style: italic; /* normal, oblique */
+    text-transform: none; /* uppercase, lowercase none */
+    text-decoration: underline; /* overline line-through none */
+    text-align: center; /* left right */
+}
+
+p#google-font{
+    color: blueviolet;
+    /* font-family: 'Trade Winds'; */
+    font-family: 'Roboto Mono';
+    font-size: 30px;
+    text-align: center; /* left right */
+}
+/* Untuk tag apapun yang memiliki id inside dan berada didalam tag div */
+/* div #inside{
+
+} */
+/* <div >
+    <p id='inside'>
+
+    </p>
+</div> */
