@@ -82,6 +82,7 @@ div.box-container div{
     width: 500px;
     height: 300px;
     line-height: 300px;
+    
     text-align: center;
     font-size: 20px;
     margin: 5px;
@@ -89,7 +90,7 @@ div.box-container div{
 }
 
 .background-color {
-    background-color: rebeccapurple;
+    background-color: rebeccapurple
 }
 
 .background-image {
@@ -97,5 +98,45 @@ div.box-container div{
     /* Agar gambar tidak muncul lebih dari satu */
     background-repeat: no-repeat;
     /* posisi gambar : vertical horizontal*/
-    background-position: center center;
+    background-position: center center
+}
+
+.background-size {
+    background-image: url('./files/pictures/kitty.jpg');
+    background-repeat: no-repeat;
+    background-size: 500px 300px
+    /* 
+        Jika hanya mendefinisikan satu. maka ini berlaku untuk lebar dan tinggi 
+        contoh: background-size: 500px (lebar 500px dan tinggi 500px)
+
+        Jika mendefinisikan dua, maka yang pertama akan digunakan untuk lebar
+        yang kedua untuk tinggi
+        contoh = background-size: 500px 300px; (lebar 500px dan tinggi 300px)
+    */
+
+    /* 
+        background-size : contain (300px)
+        Web browser akan berusaha menampilkan 1 gambar utuh namun tetap
+        mempertahankan rasio gambar, sehingga jika tidak 'pas' akan terdapat
+        ruang sisa. Yang ini akan di isi oleh gambar yang sama (repeat)
+    */
+    /* 
+        background-size : cover (500px)
+        Web browser akan berusaha menampilkan 1 gambar utuh untuk menutupi
+        element, sehingga jika rasio element (div) tidak sama dengan gambar
+        Maka gambar akan terpotong
+    */
+    
+}
+
+.background-attachment {
+    background-image: url('./files/pictures/logo-css-300x300.png');
+    background-attachment: fixed;
+}
+
+.background-shorthand{
+    /* 
+        cara singkat menulis background
+    */
+    background: aqua center center fixed url('./files/pictures/logo-css-300x300.png') 
 }
