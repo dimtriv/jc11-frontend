@@ -1,4 +1,7 @@
 /* SELECTOR */
+body {
+    background-color: rgb(172, 168, 163);
+}
 
 /* Semua tag H2 */
 /* 
@@ -162,16 +165,59 @@ p#font {
 p#google-font{
     color: blueviolet;
     /* font-family: 'Trade Winds'; */
-    font-family: 'Roboto Mono';
+    font-family: 'Roboto Mono'    ;
     font-size: 30px;
     text-align: center; /* left right */
 }
-/* Untuk tag apapun yang memiliki id inside dan berada didalam tag div */
-/* div #inside{
 
-} */
-/* <div >
-    <p id='inside'>
+/* ################# */
+/* ### BOX MODEL ### */
+/* ################# */
 
-    </p>
-</div> */
+/* Untuk tag div yang memiliki class = width-height */
+div.width-height{
+    background-color: black;
+    color: white;
+    width: 15rem;
+    height : 300px;
+    font-size: 30px;
+    line-height: 300px; /* Tinggi baris konten */
+    text-align: center;
+    margin: 0 auto;
+
+    /* 
+        - Width dan Height hanya untuk block element
+
+        - % , tergantung dari lebar parent
+
+        - em , tergantung dari size font element itu sendiri
+            font : 20px
+            width : 15em : 15 * 20 = 300px
+
+        - rem , tergantung dari size font root element (html default 16px)
+
+    */
+
+}
+
+/* Untuk tag apapun yang memiliki class padding */
+/* Penambahan padding memungkinkan akan mengubah ukuran dari element */
+.padding {
+    background-color: black;
+    color: white;
+    width: 300px;
+    height : 100px;
+
+    padding: 20px 30px
+    /* 
+        Shorthand padding
+        - padding : 5px ; semua sisi akan memiliki 5px
+
+        - padding : 5px 10px; top & bottom 5px , left & right 10px
+
+        - padding : 5px 10px 15px ; top 5px, left / right 10px, bottom 15px
+
+        - padding : 5px 10px 15px 20px ; left - top - right - bottom
+
+    */
+}
