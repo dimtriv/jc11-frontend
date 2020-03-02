@@ -102,3 +102,42 @@ input#hello:active{
     font-size: 15px;
     font-weight: normal;
 }
+
+/* MEDIA QUERY */
+div.media{
+    width: 90%;
+    height: 500px;
+    line-height: 500px;
+    background-color: violet;
+    margin: 100px auto;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid brown;
+}
+
+@media(min-width: 700px){
+    div.media{
+        background-color: red;
+        border : 3px solid black;
+        font-size: 20px;
+        color: white;
+    }
+}
+
+@media(min-width: 800px){
+    div.media{
+        background-color: rgb(45, 167, 15);
+        border : 3px solid rgb(34, 136, 161);
+        font-size: 20px;
+        color: white;
+    }
+}
+
+@media(max-width: 540px){
+    /* handphone */
+    div.media{
+        background-color: black;
+        color: black;
+    }
+}
