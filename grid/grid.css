@@ -1,0 +1,27 @@
+/* MENGATUR LEBAR, TINGGI, POSISI ELEMENT SECARA 2 DIMENSI */
+
+* {
+    box-sizing: border-box;
+    margin : 0;
+    padding : 0
+}
+
+.first-container{
+    display: grid;
+}
+
+.item {
+    background-color: #58d5f6;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+}
+
+/* 
+    tag apapun yang memiliki class 'item'
+    dimana mereka merupakan sebuah child
+    dan mereka merupakan child dengan urutan angka genap (2 , 4, 6, 8, dst 
+*/
+.item:nth-child(even){
+    background-color: #236fc8;
+}
