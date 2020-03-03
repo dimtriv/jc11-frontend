@@ -9,9 +9,8 @@
 .first-container{
     display: grid;
     width: 90%;
-    height: 70vh; /* Tinggi view browser */
+    /* height: 70vh; Tinggi view browser */
     margin: 0 auto;
-    border: 1px solid black
 }
 
 .item {
@@ -26,7 +25,7 @@
     dimana mereka merupakan sebuah child
     dan mereka merupakan child dengan urutan angka genap (2 , 4, 6, 8, dst 
 */
-.item:nth-child(odd){
+.item:nth-child(even){
     background-color: #236fc8;
 }
 
@@ -38,13 +37,18 @@
     /* grid-template-columns: 100px 400px 200px ; */
     /* grid-template-columns: 25% 25% 25%; */
     /* grid-template-columns: repeat(3, 25%); */
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 3fr 1fr;
 
-    /* Menentukan tinggi setiap baris */
-    /* grid-template-rows: 100px 150px 70px; */
+    /* Menentukan tinggi baris */
+    /* untuk baris pertama */
+    grid-template-rows: 100px;
+    /* grid-template-rows: 100px 150px 70px; untuk baris pertama, kedua ,ketiga */
     /* grid-template-rows: 10% 60% 20%; */
     /* grid-template-rows: 1fr 3fr 2fr; */
-    grid-template-rows: repeat(3, 20%);
+    /* grid-template-rows: repeat(3, 20%); */
+
+    /* Menentukan tinggi semua baris yang belum di definisikan*/
+    grid-auto-rows: 150px ;
 
     /* margin antar kolom */
     /* column-gap : 20px; */
@@ -52,7 +56,28 @@
     /* margin antar baris */
     /* row-gap: 15px; */
 
-    gap : 10px 25px
+    gap : 20px 15px
 
 }
 
+.item-2 {
+    /* grid-column-start: 2;
+    grid-column-end: 3; */
+    grid-column: 2 / 3;
+
+    /* grid-row-start: 1;
+    grid-row-end: 3; */
+    grid-row: 1 / 3;
+
+}
+
+.item-5 {
+    grid-column: 1 / 3;
+}
+
+.item-6 {
+    grid-row: 2 / 4;
+    grid-column : 3 / 4
+}
+
+/* JUSTIFY & ALIGN CONTENT */
