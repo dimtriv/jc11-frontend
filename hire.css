@@ -24,10 +24,15 @@ body {
     font-size: 1.5em;
     display: grid;
 
+    grid-template-areas: 
+    "navbar"
+    ;
+
     grid-template-rows: 130px 800px 200px;
 }
 
 .navbar {
+    grid-area: navbar;
     background-image: linear-gradient(
         to right,
         rgb(7, 211, 201),
@@ -43,6 +48,7 @@ body {
 }
 
 nav ul {
+    margin: 25px auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     text-align: center;
